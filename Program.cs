@@ -5,19 +5,19 @@ class MatrixWrapper
     private int[,] matrix;
     private double rmsValue; // середньоквадратичне значення
 
-    public MatrixWrapper(int[,] inputMatrix)
+    public MatrixWrapper(int[,] inputMatrix)// Змінений код в гілці// Змінений код в гілці// Змінений код в гілці
     {
         matrix = inputMatrix;
         rmsValue = CalculateRMS();
     }
 
-    // повертає суму елементів заданого стовпця
+    // повертає суму елементів заданого стовпця// Змінений код в гілці// Змінений код в гілці// Змінений код в гілці
     public int this[int columnIndex]
     {
         get
         {
             if (columnIndex < 0 || columnIndex >= matrix.GetLength(1))
-                throw new IndexOutOfRangeException("Неправильний індекс стовпця");
+                throw new IndexOutOfRangeException("Неправильний індекс стовпця");// Змінений код в гілці// Змінений код в гілці// Змінений код в гілці
 
             int sum = 0;
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -29,7 +29,7 @@ class MatrixWrapper
     }
 
     // Властивість тільки для читання
-    public double RMSValue
+    public double RMSValue// Змінений код в гілці// Змінений код в гілці// Змінений код в гілці
     {
         get { return rmsValue; }
     }
@@ -38,8 +38,8 @@ class MatrixWrapper
     private double CalculateRMS()
     {
         int rows = matrix.GetLength(0);
-        int cols = matrix.GetLength(1);
-        double sumSquares = 0;
+        int cols = matrix.GetLength(1);   // Змінений код в гілці
+        double sumSquares = 0;            // Змінений код в гілці// Змінений код в гілці// Змінений код в гілці// Змінений код в гілці
         int count = rows * cols;
 
         foreach (int value in matrix)
